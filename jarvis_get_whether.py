@@ -27,7 +27,7 @@ def detect_city_by_ip() -> str:
 @function_tool
 async def get_weather(city: str = "") -> str:
     
-    api_key = os.getenv("OPENWEATHER_API_KEY")
+    API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
     if not api_key:
         logger.error("OpenWeather API key missing है।")
@@ -71,6 +71,7 @@ async def get_weather(city: str = "") -> str:
         logger.exception(f"Weather fetch करते समय exception आया: {e}")
         return "Weather fetch करते समय एक error आया"
     
+
 
 
 
