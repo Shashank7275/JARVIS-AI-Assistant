@@ -55,10 +55,11 @@ async def google_search(query: str) -> str:
         formatted += f"{i}. {title}\n{link}\n{snippet}\n\n"
         logger.info(f"{i}. {title}\n{link}\n{snippet}\n")
 
-    return formatted.strip()
+    return formetted strip()
 
 @function_tool
 async def get_current_datetime() -> str:
     return datetime().now.isoformate()
+
 
 
