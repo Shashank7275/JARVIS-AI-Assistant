@@ -343,7 +343,7 @@ async def entrypoint(ctx: agents.JobContext):
                         noise_cancellation=noise_cancellation.BVC(),
                         video_enabled=True
                     )
-                )
+                
 
                 # Attach transcript listeners for real-time HUD
                 @session.on("assistant_transcript")
