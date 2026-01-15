@@ -1,6 +1,6 @@
 import os
 import sys
-import asyncio
+import asynci0
 import subprocess
 import logging
 import builtins
@@ -68,7 +68,7 @@ from jarvis_screen_reader import (
 )
 from chess_game import JarvisChessGUI
 from real_stock import realtime_stock_advisor
-from jarvis_drawing_mode import pencil_sketch, save_image,main
+
 
 # ---------------------- AUTO CODE FIXER IMPORTS ----------------------
 # from file_manager import save_code
@@ -91,7 +91,6 @@ async def jarvis_auto_code(prompt: str, filename: str = "output.py") -> str:
 async def doctor_strange_effect() -> str:
     # ... unchanged
     pass
-
 @function_tool
 async def activate_ironman_shoot() -> str:
     # ... unchanged
@@ -193,30 +192,6 @@ async def create_image(prompt: str, size: str = "512x512") -> str:
         return await generate_magic_image(prompt, size)
     except Exception as e:
         return f"❌ Image generation failed: {e}"
-
-@function_tool
-async def activate_jarvis_sketch() -> str:
-    try:
-        base_dir = os.path.dirname(os.path.abspath(__file__))
-        script = os.path.join(base_dir, "jarvis_ai_sketch.py")
-        try:
-            subprocess.Popen([sys.executable, "-m", "streamlit", "run", script], close_fds=True)
-            return "✅ Jarvis Sketch opened in browser at http://localhost:8501"
-        except Exception:
-            subprocess.Popen([sys.executable, script], close_fds=True)
-            return "✅ Jarvis Sketch opened"
-    except Exception as e:
-        return f"❌ Jarvis Sketch failed: {e}"
-@function_tool
-async def activate_drawing_mode() -> str:
-    try:
-        script = os.path.join(os.path.dirname(__file__), "jarvis_drawing_mode.py")
-        subprocess.Popen([sys.executable, script], close_fds=True)
-        return "✅ Drawing mode opened"
-    except Exception as e:
-        return f"❌ Drawing mode failed: {e}"
-
-
 # 🔥 ✅ NEW WHATSAPP VOICE AUTOMATION TOOL (exactly like your other tools)
 @function_tool
 async def send_whatsapp_message(contact: str, message: str = "") -> str:
@@ -347,8 +322,8 @@ def update_jarvis_state(text, speaker="jarvis", data_type="transcript"):
 # ENTRYPOINT (unchanged - your fixed version)
 # ==============================================================================
 async def entrypoint(ctx: agents.JobContext):
-    max_retries = 5
-    retry_count = 0
+    max_retries = 6
+    retry_count = 1
     base_wait_time = 3
     
     while retry_count < max_retries:
