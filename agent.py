@@ -1,6 +1,6 @@
 import os
 import sys
-import asynci0
+import asynci
 import subprocess
 import logging
 import builtins
