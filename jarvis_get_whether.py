@@ -56,6 +56,7 @@ async def get_weather(city: str = "") -> str:
         temperature = data["main"]["temp"]
         humidity = data["main"]["humidity"]
         wind_speed = data["wind"]["speed"]
+        UV_INDEX = data["UV"]["Index"]
 
         result = (f"Weather in {city}:\n"
                   f"- Condition: {weather}\n"
@@ -71,5 +72,6 @@ async def get_weather(city: str = "") -> str:
         logger.exception(f"Weather fetch करते समय exception आया: {e}")
         return "Weather fetch करते समय एक error आया"
     
+
 
 
