@@ -2,7 +2,7 @@ import os
 import requests
 import logging
 from dotenv import load_dotenv
-from livekit.agents import function_tool  # ✅ Correct decorator
+from livekit.agents import function_tool  
 
 load_dotenv()
 
@@ -71,4 +71,5 @@ async def get_weather(city: str = "") -> str:
         logger.exception(f"Weather fetch करते समय exception आया: {e}")
         return "Weather fetch करते समय एक error आया"
     
+
 
