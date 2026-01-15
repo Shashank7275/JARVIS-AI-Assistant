@@ -1,8 +1,9 @@
 import os
+import sys
 import requests
 import logging
 from dotenv import load_dotenv
-from livekit.agents import function_tool  # ✅ Correct decorator
+from livekit.agents import function_tool
 from datetime import datetime
 
 # Load environment variables
@@ -58,5 +59,6 @@ async def google_search(query: str) -> str:
 
 @function_tool
 async def get_current_datetime() -> str:
-    return datetime.now().isoformat()
+    return datetime().now.isoformate()
+
 
