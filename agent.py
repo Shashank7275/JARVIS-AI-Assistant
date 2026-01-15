@@ -68,10 +68,6 @@ from chess_game import JarvisChessGUI
 from real_stock import realtime_stock_advisor
 
 
-# ---------------------- AUTO CODE FIXER IMPORTS ----------------------
-# from file_manager import save_code
-# from runner import run_code
-
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
