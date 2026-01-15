@@ -6,7 +6,7 @@ import logging
 import builtins
 import json
 import time
-from datetime import datetime
+from datetime import date
 from dotenv import load_dotenv
 import threading
 import tkinter as tk
