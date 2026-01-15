@@ -48,9 +48,7 @@ from mouse_scroll import (
 from jarvis_music_tools import activate_music, deactivate_music, play_song
 
 from image_gen_sd import sd_generate_image
-# from ai_video import generate_ai_video
 from image_generate import generate_magic_image
-import ai_video
 from Bhojpuri_lang import listen_bhojpuri, speak_bhojpuri
 from jarvis_gui_screen_share import JarvisScreenShare
 from delete_file import send_file_and_delete
@@ -115,38 +113,6 @@ async def open_chatbot_gui() -> str:
 async def chess_game() -> str:
     # ...unchanged
     pass
-
-
-
-@function_tool
-async def generate_ai_video(prompt: str, duration: int = 10, resolution: str = "720p") -> str:
-    try:
-        fps = 10
-        frames = max(1, min(12, int(fps * max(1, int(duration)))))
-        res_map = {
-            "480p": "640x480",
-            "720p": "1280x720",
-            "1080p": "1920x1080",
-            "512x512": "512x512"
-        }
-        if isinstance(resolution, str) and "x" in resolution:
-            size = resolution
-        else:
-            size = res_map.get(str(resolution).lower(), "1280x720")
-        result = await ai_video.generate_ai_video(
-            prompt=prompt,
-            frames=frames,
-            fps=fps,
-            size=size,
-            steps=20,
-            guidance=7.5,
-            negative_prompt="",
-            send_to_whatsapp=False,
-            whatsapp_number=""
-        )
-        return result
-    except Exception as e:
-        return f"❌ Video generation failed: {e}"
 
 @function_tool
 async def create_presentation(topic: str) -> str:
