@@ -62,6 +62,7 @@ async def get_weather(city: str = "") -> str:
                   f"- Temperature: {temperature}°C\n"
                   f"- Humidity: {humidity}%\n"
                   f"- Wind Speed: {wind_speed} m/s")
+                  f" - UV Index: {UV_INDEX}\n"
 
         logger.info(f"Weather result: \n{result}")
         return result
@@ -70,3 +71,4 @@ async def get_weather(city: str = "") -> str:
         logger.exception(f"Weather fetch करते समय exception आया: {e}")
         return "Weather fetch करते समय एक error आया"
     
+
