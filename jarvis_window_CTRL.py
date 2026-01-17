@@ -7,7 +7,7 @@ import webbrowser
 from fuzzywuzzy import process
 
 try:
-    from livekit.agents import function_tool
+    from livekit.agents import function_too
 except ImportError:
     def function_tool(func):
         return function
@@ -207,6 +207,7 @@ async def close(window_name: str) -> str:
 @function_tool
 async def folder_file(path: str) -> str:
     return "❌ folder_file tool not implemented"
+
 
 
 
