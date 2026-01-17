@@ -9,6 +9,7 @@ try:
     import pygetwindow as gw
 except ImportError:
     gw = None
+    
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -102,3 +103,4 @@ async def open_system_file_explorer() -> str:
             return "❌ Opening file explorer is currently only supported on Windows."
     except Exception as e:
         return f"❌ Failed to open File Explorer: {e}"
+
