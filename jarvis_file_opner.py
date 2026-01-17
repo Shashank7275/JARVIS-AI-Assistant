@@ -100,8 +100,9 @@ async def open_system_file_explorer() -> str:
             os.startfile('.')
             return "✅ File Explorer opened to the current directory."
         else:
-            return "❌ Opening file explorer is currently only supported on Windows."
+            return "❌ Opening file explorer is currently only supported on Windows"
     except Exception as e:
         return f"❌ Failed to open File Explorer: {e}"
+
 
 
