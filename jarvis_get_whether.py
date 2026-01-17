@@ -7,7 +7,7 @@ from livekit.agents import function_tool
 load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__
+logger = logging.getLogger(__name__)
 
 def detect_city_by_ip() -> str:
     try:
@@ -71,6 +71,7 @@ async def get_weather(city: str = "") -> str:
         logger.exception(f"Weather fetch करते समय exception आया: {e}")
         return "Weather fetch करते समय एक error आया"
     
+
 
 
 
