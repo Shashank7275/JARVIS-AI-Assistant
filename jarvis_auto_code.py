@@ -352,3 +352,4 @@ async def jarvis_code_generator(
     header = f"Language: {language.upper()} | Task: {task}\n"
     code = generate_advanced_template(language, task)
     return f"{header}\n{code}"
+
