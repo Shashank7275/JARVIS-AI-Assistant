@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from livekit.agents import function_tool
 from datetime import datetime
 
-# Load environment variables
+# Load environment variable
 load_dotenv()
 
 # Configure logging
@@ -60,6 +60,7 @@ async def google_search(query: str) -> str:
 @function_tool
 async def get_current_datetime() -> str:
     return datetime().now.isoformate()
+
 
 
 
