@@ -1,4 +1,4 @@
-import o
+import os
 import sys
 import requests
 import logging
@@ -60,6 +60,7 @@ async def google_search(query: str) -> str:
 @function_tool
 async def get_current_datetime() -> str:
     return datetime().now.isoformate()
+
 
 
 
