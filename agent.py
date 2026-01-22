@@ -51,13 +51,11 @@ from jarvis_music_tools import activate_music, deactivate_music, play_song
 from image_gen_sd import sd_generate_image
 from image_generate import generate_magic_image
 from Bhojpuri_lang import listen_bhojpuri, speak_bhojpuri
-from jarvis_gui_screen_share import JarvisScreenShare
 from delete_file import send_file_and_delete
 from lock import activate_sleep_mode, lock_screen, shutdown_pc, cancel_shutdown
-from jarvis_whatapp import whatsapp_main  # ✅ WHATSAPP IMPORT
+from jarvis_whatapp import whatsapp_main  
 from ai_integrated_system import JarvisAI
 from jarvis_ppt_tool import create_presentation
-from image_to_pdf import jpg_to_pdf_decoder, multiple_jpg_to_pdf_decoder
 from jarvis_auto_code import jarvis_code_generator
 from jarvis_screen_reader import (
     read_file_tool,
@@ -411,11 +409,4 @@ async def entrypoint(ctx: agents.JobContext):
 # MAIN (removed duplicate)
 # ==============================================================================
 if __name__ == "__main__":
-    try:
-        gui_path = os.path.join(os.path.dirname(__file__), "jarvis_gui.py")
-        if os.path.exists(gui_path):
-            subprocess.Popen([sys.executable, gui_path], close_fds=True)
-    except:
-        print("ℹ️ GUI start failed - continuing with voice only")
-    
-    agents.cli.run_app(agents.WorkerOptions(entrypoint_fnc=entrypoint))
+    main()
