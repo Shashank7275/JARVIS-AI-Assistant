@@ -48,15 +48,10 @@ from mouse_scroll import (
 )
 from jarvis_music_tools import activate_music, deactivate_music, play_song
 
-from image_gen_sd import sd_generate_image
-from image_generate import generate_magic_image
-from Bhojpuri_lang import listen_bhojpuri, speak_bhojpuri
 from delete_file import send_file_and_delete
 from lock import activate_sleep_mode, lock_screen, shutdown_pc, cancel_shutdown
 from jarvis_whatapp import whatsapp_main  
-from ai_integrated_system import JarvisAI
-from jarvis_ppt_tool import create_presentation
-from jarvis_auto_code import jarvis_code_generator
+
 from jarvis_screen_reader import (
     read_file_tool,
     read_screen_tool,
@@ -90,29 +85,10 @@ async def activate_ironman_shoot() -> str:
     pass
 
 @function_tool
-async def activate_bhojpuri_mode() -> str:
-    # ... unchanged
-    pass
-
-@function_tool
-async def activate_jarvis_shoot_open() -> str:
-    # ... unchanged
-    pass
-
-@function_tool
-async def open_chatbot_gui() -> str:
-    # ... unchanged
-    pass
-
-@function_tool
 async def chess_game() -> str:
     # ...unchanged
     pass
 
-@function_tool
-async def create_presentation(topic: str) -> str:
-    # ... unchanged
-    pass
 
 @function_tool
 async def jarvis_code_generator(topic: str) -> str:
@@ -237,21 +213,12 @@ class Assistant(Agent):
                 create_jarvis_website,   
                 play_song,
                 
-                generate_code_file,
-                sd_generate_image,
-                create_image,
-                activate_jarvis_sketch,
-                activate_drawing_mode,
+              
                 
                 generate_magic_image,
                 doctor_strange_effect,
-                activate_ironman_shoot,
-                activate_jarvis_shoot_open,
-                open_chatbot_gui,
                 jarvis_auto_code,
-                create_presentation,
-                activate_bhojpuri_mode,
-                generate_ai_video,
+             
                 # 🔥 ✅ NEW WHATSAPP VOICE TOOLS
                 send_whatsapp_message,
                 open_whatsapp,
