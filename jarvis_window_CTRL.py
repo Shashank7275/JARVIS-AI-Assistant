@@ -4,7 +4,7 @@ import logging
 import sys
 import asyncio
 import webbrowser
-from fuzzywuzzy import process
+from fuzzywuzzy import proces
 
 try:
     from livekit.agents import function_tool
@@ -207,6 +207,7 @@ async def close(window_name: str) -> str:
 @function_tool
 async def folder_file(path: str) -> str:
     return "❌ folder_file tool not implemented"
+
 
 
 
