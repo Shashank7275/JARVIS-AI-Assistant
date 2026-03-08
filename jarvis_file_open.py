@@ -9,7 +9,6 @@ try:
     import pygetwindow as gw
 except ImportError:
     gw = None
-    
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -89,22 +88,3 @@ async def Play_file(name: str) -> str:
     index = await index_files(folders_to_index)
     command = name.strip()
     return await handle_command(command, index)
-
-@function_tool
-async def open_system_file_explorer() -> str:
-    """
-    Opens the system's default file explorer to the current directory.
-    """
-    try:
-        if os.name == 'nt':  # For Windows
-            os.startfile('.')
-            return "✅ File Explorer opened to the current directory."
-        else:
-            return "❌ Opening file explorer is currently only supported on Windows"
-    except Exception as e:
-        return f"❌ Failed to open File Explorer: {e}"
-
-
-
-
-
