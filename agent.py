@@ -21,17 +21,7 @@ from memory_interceptor import MEMORY_KEYWORDS
 from jarvis_get_whether import get_weather
 from Jarvis_window_CTRL import open, close, folder_file
 from Jarvis_file_open import Play_file
-from keyboard_mouse_CTRL import move_cursor_tool, mouse_click_tool, scroll_cursor_tool, type_text_tool, press_key_tool, swipe_gesture_tool, press_hotkey_tool, control_volume_tool
-
-from youtube import play_song, download_favourite_song, share_favourite_song_whatsapp
-
-from image_to_pdf import image_to_pdf
-
-from jarvis_email import send_email_interactive, read_emails, reply_email
-from object_detection import detect_objects
-
-
-
+from keyboard_mouse_CTRL import move_cursor_tool, mouse_click_tool, scroll_cursor_tool, type_text_tool, press_key_tool, swipe_gesture_tool, press_hotkey_tool, control_volume_too
 
 load_dotenv()
 if not os.getenv("GOOGLE_API_KEY"):
@@ -77,12 +67,7 @@ class Assistant(Agent):
                             press_hotkey_tool, 
                             control_volume_tool, #
                             swipe_gesture_tool,
-                            image_to_pdf,
                             
-                            send_email_interactive,
-                            read_emails,
-                            reply_email,
-                           
                             
                          ]
                          )
