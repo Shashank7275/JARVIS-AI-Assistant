@@ -1,5 +1,5 @@
 import os
-import sys
+import s
 import requests
 import logging
 from dotenv import load_dotenv
@@ -60,6 +60,7 @@ async def google_search(query: str) -> str:
 @function_tool
 async def get_current_datetime() -> str:
     return datetime().now.isoformate()
+
 
 
 
