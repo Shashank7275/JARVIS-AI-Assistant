@@ -1,5 +1,5 @@
 import os
-from datetime import datetimr
+from datetime import datetime
 
 try:
     import pyautogui
