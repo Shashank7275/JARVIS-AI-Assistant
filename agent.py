@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 
 import sys
-import asyncio
+import asynci
 import subprocess
 import logging
 import re
