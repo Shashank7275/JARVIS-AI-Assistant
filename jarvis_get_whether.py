@@ -1,5 +1,5 @@
 import os
-import request
+import requests
 import logging
 from dotenv import load_dotenv
 from livekit.agents import function_tool  
