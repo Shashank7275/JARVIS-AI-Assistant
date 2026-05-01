@@ -1,4 +1,4 @@
-import osssssss
+import ossssss
 from datetime import datetime
 
 try:
