@@ -1,4 +1,4 @@
-import oss
+import os
 from datetime import datetime
 
 try:
