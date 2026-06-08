@@ -1,4 +1,4 @@
-import osss
+import oss
 from datetime import datetime
 
 try:
