@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-import ossssssss
+import osssssss
 
 
 import sys
